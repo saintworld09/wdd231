@@ -7,7 +7,7 @@
   
   /* Set background for the whole page */
   body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
     background-color: #e6f7e5;
     display: flex;
     flex-direction: column;
