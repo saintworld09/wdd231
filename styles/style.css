@@ -1,3 +1,4 @@
+/* General styles */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -18,12 +19,14 @@ header {
 }
 
 nav ul {
+  display: flex; /* Use Flexbox for navigation */
+  justify-content: center; /* Centers the navigation items */
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 nav ul li {
-  display: inline;
   margin: 0 10px;
 }
 
