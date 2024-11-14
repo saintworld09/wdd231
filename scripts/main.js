@@ -1,48 +1,84 @@
-// Set the current year in the footer
-document.getElementById('year').textContent = new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", function () {
+    // Sample course list array with course details (name, category, completion status, credits)
+    const courseList = [
+        { id: 1, name: "CSE 110", category: "CSE", completed: true, credits: 3 },
+        { id: 2, name: "WDD 130", category: "WDD", completed: false, credits: 4 },
+        { id: 3, name: "CSE 111", category: "CSE", completed: false, credits: 3 },
+        { id: 4, name: "CSE 210", category: "CSE", completed: true, credits: 4 },
+        { id: 5, name: "WDD 131", category: "WDD", completed: true, credits: 3 },
+        { id: 6, name: "WDD 231", category: "WDD", completed: false, credits: 4 }
+    ];
 
-// Display the last modified date
-document.getElementById('lastModified').textContent = "Last Modified: " + document.lastModified;
+    // Function to update the course selection count and dynamically display courses
+    function displayCourses(courses) {
+        const courseContainer = document.getElementById('course-cards');
+        courseContainer.innerHTML = ''; // Clear the existing course list
 
-// Array of courses
-const courses = [
-    { subject: 'CSE', number: 110, title: 'Introduction to Programming', credits: 2, completed: true },
-    { subject: 'WDD', number: 130, title: 'Web Fundamentals', credits: 2, completed: false },
-    { subject: 'CSE', number: 210, title: 'Programming with Classes', credits: 3, completed: false },
-    { subject: 'WDD', number: 231, title: 'Frontend Web Development I', credits: 2, completed: true }
-];
+        // Dynamically create course cards
+        courses.forEach(course => {
+            const courseCard = document.createElement('div');
+            courseCard.classList.add('course-card');
+            if (course.completed) {
+                courseCard.classList.add('completed'); // Apply different style if the course is completed
+            }
 
-// Display courses in the container
-function displayCourses(filter) {
-    const container = document.getElementById('course-list');
-    container.innerHTML = ''; // Clear previous content
+            courseCard.innerHTML = `
+                <h3>${course.name}</h3>
+            `;
+            courseContainer.appendChild(courseCard);
+        });
 
-    // Filter courses based on the category
-    const filteredCourses = courses.filter(course => filter === 'all' || course.subject === filter);
+        // Calculate total credits dynamically
+        const totalCredits = courses.reduce((total, course) => total + course.credits, 0);
+        document.getElementById('total-credits').innerText = `Total Credits: ${totalCredits}`;
+    }
 
-    // Display each course
-    filteredCourses.forEach(course => {
-        const courseDiv = document.createElement('div');
-        courseDiv.className = course.completed ? 'completed-course' : 'course';
-        courseDiv.innerHTML = `
-            <h3>${course.subject} ${course.number} - ${course.title}</h3>
-            <p><strong>Credits:</strong> ${course.credits}</p>
-            <p><strong>Status:</strong> ${course.completed ? "Completed" : "In Progress"}</p>
-        `;
-        container.appendChild(courseDiv);
+    // Display all courses by default
+    displayCourses(courseList);
+
+    // Helper function to handle active class toggle
+    function handleActiveButton(button) {
+        document.querySelectorAll('.course-filter button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        button.classList.add('active');
+    }
+
+    // Event listeners for filter buttons
+    document.getElementById('all-courses-btn').addEventListener('click', (event) => {
+        displayCourses(courseList); // Display all courses
+        handleActiveButton(event.target); // Set active state on clicked button
     });
 
-    // Update total credits
-    calculateTotalCredits(filteredCourses);
-}
+    document.getElementById('wdd-courses-btn').addEventListener('click', (event) => {
+        const wddCourses = courseList.filter(course => course.category === 'WDD');
+        displayCourses(wddCourses); // Display only WDD courses
+        handleActiveButton(event.target); // Set active state on clicked button
+    });
 
-// Calculate and display total credits
-function calculateTotalCredits(filteredCourses) {
-    const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
-    document.getElementById('total-credits').textContent = `Total Credits: ${totalCredits}`;
-}
+    document.getElementById('cse-courses-btn').addEventListener('click', (event) => {
+        const cseCourses = courseList.filter(course => course.category === 'CSE');
+        displayCourses(cseCourses); // Display only CSE courses
+        handleActiveButton(event.target); // Set active state on clicked button
+    });
 
-// Initialize page with all courses displayed
-window.onload = function() {
-    displayCourses('all');
-};
+    // Display the current year
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+
+    // Display the last modified date
+    document.getElementById("last-modified").textContent = document.lastModified;
+
+    // Display the current date
+    const currentDate = new Date();
+    document.getElementById("current-date").textContent = currentDate.toLocaleDateString();
+
+    // Mobile Menu Toggle
+    const menuButton = document.getElementById('menu-button');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if(menuButton && navMenu) {
+        menuButton.addEventListener('click', () => {
+            navMenu.classList.toggle('open'); // Toggle the mobile menu visibility
+        });
+    }
+});

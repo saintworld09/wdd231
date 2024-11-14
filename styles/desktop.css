@@ -1,0 +1,249 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border don't affect layout width */
+}
+
+/* Desktop View */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto; /* Center the header */
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: 2rem; /* Using rem for scalability */
+    margin-top: 10px;
+}
+
+nav {
+    width: 90%; /* Set the navigation to the same width as the header */
+    max-width: 1000px;
+    margin: 0 auto; /* Center the navigation */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+}
+
+nav ul li {
+    width: auto;
+    text-align: center;
+    background-color: #444;
+    border-right: 1px solid #fff;
+}
+
+nav ul li:last-child {
+    border-right: none;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem; /* Using rem for scalability */
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Flex layout for desktop screens */
+main {
+    padding: 40px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Flex container for section layout */
+.section-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Updated Section Styling */
+.section-container section h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #333; /* Dark background for visibility */
+    color: white;           /* Text color for contrast */
+    padding: 10px;
+    margin-top: 0;
+    display: block;         /* Ensures h2 is a block element */
+}
+
+
+section {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.certificate {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Section and certificate heading */
+section h2,
+.certificate h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+/* Certificate Section Header */
+.Certificate h2 {
+    width: 100%;          /* Makes the heading take full width */
+    background-color: #333;  /* Suitable background color */
+    color: white;         /* White text for contrast */
+    padding: 10px 20px;   /* Adjust padding for spacing */
+    text-align: center;   /* Center-align the heading text */
+    margin: 0;            /* Remove default margin */
+    border-radius: 5px;   /* Optional: Adds rounded corners */
+}
+/* Hide total credits and selected courses count */
+#total-credits, #selected-courses {
+    display: none;
+}
+/* Total Credits Paragraph */
+.total-credits {
+    background-color: #3498db; /* Background color for the paragraph */
+    color: white;              /* Text color for contrast */
+    text-align: center;        /* Center-align the text */
+    padding: 10px;             /* Padding around the text */
+    font-size: 1rem;           /* Font size for readability */
+    border-radius: 5px;        /* Rounded corners for a smooth look */
+    margin: 15px 0;            /* Space above and below the paragraph */
+}
+
+
+section img,
+.certificate img {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+
+/* Course Filter Styling */
+.course-filter {
+    width: 100%;                  /* Full width of container */
+    background-color: #f2f2f2;     /* Light gray background; change to preferred color */
+    padding: 15px;                 /* Padding for spacing around the text */
+    text-align: center;            /* Center-aligns the content */
+    border-radius: 5px;            /* Optional: rounded corners */
+    margin: 10px 0;                /* Space around the filter section */
+}
+
+/* Button Styling inside Course Filter */
+.course-filter button {
+    background-color: #3498db;     /* Button background color; change to preferred color */
+    color: white;                  /* White text for contrast */
+    padding: 10px 20px;            /* Padding for button sizing */
+    border: none;                  /* Remove default border */
+    border-radius: 5px;            /* Rounded corners for buttons */
+    margin: 5px;                   /* Space between buttons */
+    cursor: pointer;               /* Cursor pointer for hover effect */
+}
+
+/* Button Hover Effect */
+.course-filter button:hover {
+    background-color: #2980b9;     /* Darker shade on hover */
+}
+/* Active/Selected Button Styling */
+.course-filter button.active {
+    background-color: #2c3e50;  /* Darker color for active button */
+    color: #fff;                /* White text for contrast */
+}
+/* Course Cards Container */
+#course-cards {
+    display: flex;           /* Use flexbox for side-by-side layout */
+    flex-wrap: wrap;         /* Wrap cards to the next line if needed */
+    gap: 16px;               /* Space between each card */
+    justify-content: center; /* Center the cards in the container */
+}
+
+/* Individual Course Card */
+.course-card {
+    width: 120px;               /* Set a fixed width for the cards */
+    background-color: #f4f4f4;  /* Light background color */
+    border: 1px solid #ccc;     /* Subtle border */
+    border-radius: 8px;         /* Rounded corners */
+    padding: 16px;              /* Space inside the card */
+    text-align: center;         /* Center the text inside each card */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Completed Course Styling */
+.course-card.completed {
+    background-color: #d1e7dd; /* Different background color for completed courses */
+    color: #155724;            /* Darker text for contrast */
+}
+
+/* Hover Effect */
+.course-card:hover {
+    transform: scale(1.05);    /* Slightly enlarge the card on hover */
+    transition: transform 0.3s; /* Smooth transition */
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Large Screen Adjustment */
+@media screen and (min-width: 1200px) {
+    header {
+        padding: 40px; /* Add more space around header for larger screens */
+    }
+
+    nav ul li a {
+        font-size: 1.2rem; /* Increase font size on larger screens */
+    }
+
+    .section-container {
+        gap: 40px; /* More space between sections */
+    }
+}

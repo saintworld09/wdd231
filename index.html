@@ -1,64 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Adekola Babatunde">
     <meta name="description" content="Course Home Page">
     <title>Course Home Page | Adekola Babatunde</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 769px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-    <script src="scripts/main.js" defer></script>
+    <script defer src="scripts/main.js"></script>
 </head>
+
 <body>
     <header>
         <img src="images/companydp.jpg" alt="Profile picture of Adekola Babatunde" class="profile-pic">
         <h1>Adekola Babatunde</h1>
-        <nav>
+        <!-- Mobile Hamburger Menu -->
+        <div class="hamburger-menu" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <!-- Navigation Menu -->
+        <nav id="nav" class="hidden">
             <ul>
-                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">Chamber</a></li>
-                <li><a href="https://github.com/saintworld09">GitHub Profile</a></li>
+                <li><a href="https://github.com/saintworld09">GitHub</a></li>
                 <li><a href="https://www.linkedin.com/in/babatunde-adekola/">LinkedIn</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section>
-            <h2>Course Work</h2>
-            <ul>
-                <li>Introduction to Programming</li>
-                <li>Web Fundamentals</li>
-                <li>Frontend Web Development I</li>
-            </ul>
-        </section>
-        
-        <section>
-            <h2>Lagos, Nigeria</h2>
-            <img src="images/lagosatnight.jpg" alt="Lagos skyline at night">
-            <p>A vibrant night view of Lagos city</p>
-        </section>
+        <div class="section-container">
+            <section>
+                <h2>Course Work</h2>
+                <ul> 
+                    <li>Introduction to Programming</li>
+                    <li>Web Fundamentals</li>
+                    <li>Frontend Web Development I</li>
+                </ul>
+            </section>
 
-        <section>
+            <section>
+                <h2>Lagos, Nigeria</h2>
+                <img src="images/lagosatnight.jpg" alt="Lagos skyline at night">
+                <p>A vibrant night view of Lagos city</p>
+            </section>
+        </div>
+
+        <div class="Certificate">
             <h2>Web and Computer Programming Certificate</h2>
+            <p class="total-credits">Credits: 21</p>
             <div class="course-filter">
-                <button onclick="filterCourses('all')">All</button>
-                <button onclick="filterCourses('CSE')">CSE</button>
-                <button onclick="filterCourses('WDD')">WDD</button>
+                <button id="all-courses-btn">All Courses</button>
+                <button id="wdd-courses-btn">WDD Courses</button>
+                <button id="cse-courses-btn">CSE Courses</button>
             </div>
-            <div id="course-list">
-                <!-- Courses will be populated here via JavaScript -->
+            <div id="course-cards">
+                <!-- Course cards will be populated dynamically by JavaScript -->
             </div>
-            <p id="total-credits"></p>
-        </section>
+            <p id="total-credits" style="display: none;"></p> <!-- Hidden credit total -->
+            <p id="selected-courses" style="display: none;"></p> <!-- Hidden selected courses count -->
+        </div>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Adekola Babatunde, Nigeria</p>
-        <p id="lastModified"></p>
+        <p>&copy; <span id="current-year"></span>🌴 Adekola Babatunde🌴 Nigeria🏁</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+        <p>Current Date: <span id="current-date"></span></p>
     </footer>
+    
+
+   
 </body>
+
 </html>
