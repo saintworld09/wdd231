@@ -220,6 +220,12 @@ section img,
     transition: transform 0.3s; /* Smooth transition */
 }
 
+/* Hide total credits and selected courses count */
+#total-credits, #selected-courses {
+    display: none;
+}
+
+
 
 
 /* Footer */
