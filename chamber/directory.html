@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chamber of Commerce Directory for lagos, Nigeria">
+    <meta name="author" content="Adekola Babatunde">
+    <meta property="og:title" content="Chamber Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/companydp.jpg">
+    <meta property="og:url" content="http://localhost/index.html">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/directory.css" media="screen and (max-width: 768px)">  <!-- Mobile Styles -->
+    <link rel="stylesheet" href="styles/directory-large.css" media="screen and (min-width: 769px)">  <!-- Desktop Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <title>Chamber Directory</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="directory.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Chamber of Commerce Directory</h1>
+        <section id="view-toggle">
+            <button id="grid-view-btn">Grid View</button>
+            <button id="list-view-btn">List View</button>
+        </section>
+        <section id="directory-container"></section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span>🌴 Adekola Babatunde🌴 Nigeria🏁</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+        <p>Current Date: <span id="current-date"></span></p>
+    </footer>
+    
+
+    <script src="javascript/directory.js"></script>
+</body>
+</html>
