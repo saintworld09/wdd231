@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chamber of Commerce Directory for lagos, Nigeria">
+    <meta name="description" content="Explore the Chamber of Commerce Directory for businesses in Lagos, Nigeria.">
     <meta name="author" content="Adekola Babatunde">
     <meta property="og:title" content="Chamber Directory">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/companydp.jpg">
-    <meta property="og:url" content="http://localhost/index.html">
+    <meta property="og:image" content="images/company.jpg">
+    <meta property="og:url" content="https://africawest.churchofjesuschrist.org/africa-west-area-vision-2024">
     <link rel="icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles/directory.css" media="screen and (max-width: 768px)">  <!-- Mobile Styles -->
-    <link rel="stylesheet" href="styles/directory-large.css" media="screen and (min-width: 769px)">  <!-- Desktop Styles -->
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="styles/directory.css" media="screen and (max-width: 768px)"> <!-- Mobile Styles -->
+    <link rel="stylesheet" href="styles/directory-large.css" media="screen and (min-width: 769px)"> <!-- Desktop Styles -->
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-    <title>Chamber Directory</title>
+
+    <title>Chamber of Commerce Directory - Lagos, Nigeria</title>
 </head>
 <body>
-
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
         <nav>
-            <ul>
-                <li><a href="directory.html">Home</a></li>
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="Chamber Logo" class="logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -33,20 +42,27 @@
     <!-- Main Content -->
     <main>
         <h1>Chamber of Commerce Directory</h1>
+
+        <!-- View Toggle Section -->
         <section id="view-toggle">
-            <button id="grid-view-btn">Grid View</button>
-            <button id="list-view-btn">List View</button>
+            <button id="grid-view-btn" class="active" aria-label="Switch to Grid View">Grid View</button>
+            <button id="list-view-btn" aria-label="Switch to List View">List View</button>
         </section>
-        <section id="directory-container"></section>
+
+        <!-- Directory Container -->
+        <section id="directory-container" class="grid-view">
+            <!-- Directory items will be dynamically inserted here -->
+        </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; <span id="current-year"></span>🌴 Adekola Babatunde🌴 Nigeria🏁</p>
+        <p>&copy; <span id="current-year"></span> 🌴 Adekola Babatunde 🌴 Nigeria 🏁</p>
         <p>Last Modified: <span id="last-modified"></span></p>
         <p>Current Date: <span id="current-date"></span></p>
     </footer>
-    
 
-    <script src="javascript/directory.js"></script>
+    <!-- JavaScript -->
+    <script src="scripts/directory.js"></script>
 </body>
 </html>
