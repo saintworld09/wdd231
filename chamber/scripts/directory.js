@@ -25,7 +25,7 @@ function displayMembers(members, viewType) {
 
         // Add HTML content for each member
         memberCard.innerHTML = `
-            <img src="${member.image}" alt="${member.name} Logo">
+            <img src="${member.image}" alt="${member.name} Logo" onerror="this.onerror=null;this.src='images/fallback.jpg';">
             <h3>${member.name}</h3>
             <p>${member.address}</p>
             <p>${member.phone}</p>

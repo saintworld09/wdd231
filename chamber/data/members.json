@@ -43,16 +43,8 @@
         "name": "Eco Solutions",
         "address": "101 Green Lane, Lagos, Nigeria",
         "phone": "+234 806 789 0123",
-        "website": "https://ecosolutions.com",
-        "image": "images/ecosolutions.jpg",
+        "website": "https://ecosolution.com",
+        "image": "images/ecosolution.jpg",
         "membershipLevel": 1
-    },
-    {
-        "name": "Lagos Travel Agency",
-        "address": "19 Wanderlust Street, Lagos, Nigeria",
-        "phone": "+234 807 890 1234",
-        "website": "https://lagostravelagency.com",
-        "image": "images/lagostravelagency.jpg",
-        "membershipLevel": 3
     }
 ]
