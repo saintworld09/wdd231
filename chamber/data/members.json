@@ -1,50 +1,50 @@
 [
     {
         "name": "Lagos Tech Hub",
+        "image": "images/lagostechhub.jpg",
         "address": "123 Tech Street, Lagos, Nigeria",
         "phone": "+234 801 234 5678",
         "website": "https://lagostechhub.com",
-        "image": "images/lagostechhub.jpg",
         "membershipLevel": 3
     },
     {
         "name": "Lagos Fashion House",
+        "image": "images/lagosfashionhouse.jpg",
         "address": "45 Fashion Avenue, Lagos, Nigeria",
         "phone": "+234 802 345 6789",
         "website": "https://lagosfashionhouse.com",
-        "image": "images/lagosfashionhouse.jpg",
         "membershipLevel": 2
     },
     {
         "name": "Naija Foods",
+        "image": "images/naijafoods.jpg",
         "address": "12 Spice Road, Lagos, Nigeria",
         "phone": "+234 803 456 7890",
         "website": "https://naijafoods.com",
-        "image": "images/naijafoods.jpg",
         "membershipLevel": 1
     },
     {
         "name": "Digital Lagos",
+        "image": "images/digitallagos.jpg",
         "address": "88 Innovation Way, Lagos, Nigeria",
         "phone": "+234 804 567 8901",
         "website": "https://digitallagos.com",
-        "image": "images/digitallagos.jpg",
         "membershipLevel": 3
     },
     {
         "name": "Lagos Media Group",
+        "image": "images/lagosmediagroup.jpg",
         "address": "33 Media Boulevard, Lagos, Nigeria",
         "phone": "+234 805 678 9012",
         "website": "https://lagosmediagroup.com",
-        "image": "images/lagosmediagroup.jpg",
         "membershipLevel": 2
     },
     {
         "name": "Eco Solutions",
+        "image": "images/ecosolution.jpg",
         "address": "101 Green Lane, Lagos, Nigeria",
         "phone": "+234 806 789 0123",
         "website": "https://ecosolution.com",
-        "image": "images/ecosolution.jpg",
         "membershipLevel": 1
     }
 ]

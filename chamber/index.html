@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Explore the Chamber of Commerce Directory for businesses in Lagos, Nigeria.">
+        <meta name="author" content="Adekola Babatunde">
+        <meta property="og:title" content="Chamber Directory">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="images/company.jpg">
+        <meta property="og:url" content="https://africawest.churchofjesuschrist.org/africa-west-area-vision-2024">
+        <link rel="icon" href="images/favicon.ico">
+    
+        <!-- CSS Styles -->
+        <link rel="stylesheet" href="styles/directory.css" media="screen and (max-width: 768px)"> <!-- Mobile Styles -->
+        <link rel="stylesheet" href="styles/directory-large.css" media="screen and (min-width: 769px)"> <!-- Desktop Styles -->
+    
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    
+        <title>Chamber of Commerce Directory - Lagos, Nigeria</title>
+    </head>
+<body>
+    <header>
+        <h1>Chamber of Commerce</h1>
+        <nav>
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="Chamber Logo" class="logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Image Section -->
+        <section class="hero">
+            <h1>Welcome to the Chamber of Commerce</h1>
+            <a href="#" class="cta-button">Join the Chamber</a>
+        </section>
+
+        <!-- Current Events Section -->
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>Business Networking Night - December 10th</li>
+                <li>Annual Gala Dinner - January 15th</li>
+                <li>Small Business Workshop - February 5th</li>
+            </ul>
+        </section>
+
+        <!-- Weather Section -->
+        <section id="weather">
+            <h2>Current Weather</h2>
+            <div id="weather-details">
+                <p id="temperature"></p>
+                <p id="description"></p>
+                <div id="forecast"></div>
+            </div>
+        </section>
+
+        <!-- Spotlight Section -->
+        <section id="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-container"></div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; <span id="current-year"></span> 🌴 Adekola Babatunde 🌴 Nigeria 🏁</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+        <p>Current Date: <span id="current-date"></span></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/directory.js"></script>
+</body>
+</html>
