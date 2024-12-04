@@ -212,6 +212,29 @@ function displayFooterInfo() {
     `;
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    const modalTriggers = document.querySelectorAll(".modal-trigger");
+    const modals = document.querySelectorAll(".modal");
+    const overlay = document.createElement("div");
+    overlay.className = "modal-overlay";
+    document.body.appendChild(overlay);
+  
+    modalTriggers.forEach(trigger => {
+      trigger.addEventListener("click", () => {
+        const modalId = trigger.dataset.modal;
+        const modal = document.getElementById(modalId);
+        modal.classList.add("active");
+        overlay.classList.add("active");
+      });
+    });
+  
+    overlay.addEventListener("click", () => {
+      modals.forEach(modal => modal.classList.remove("active"));
+      overlay.classList.remove("active");
+    });
+  });
+  
+
 // Initialize functions
 fetchWeather();
 fetchMembers();

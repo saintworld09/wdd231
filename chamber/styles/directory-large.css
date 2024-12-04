@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif; /* Google Font */
+    
 }
 
 /* Header Section */
@@ -238,4 +239,221 @@ footer {
 
 footer p {
     margin: 8px 0;
+}
+
+/* General Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+form label {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+input, select, textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 15px;
+    background-color: #004d99;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+/* Membership Cards Styling */
+.membership-cards {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.membership-cards h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    height: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.card button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #218838;
+}
+
+
+/* Modal Styling for Desktop */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 10px;
+}
+
+.modal-header {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.modal-body {
+    font-size: 16px;
+}
+
+.modal-footer {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.modal-close {
+    color: #aaa;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Desktop Layout */
+@media screen and (min-width: 769px) {
+    .join-selection {
+        display: flex;
+        justify-content: space-between; /* Space the two elements apart */
+        gap: 20px; /* Space between the two sections */
+        padding: 20px;
+    }
+
+    .form-container, .membership-cards {
+        width: 48%; /* Each section takes up 48% of the available space */
+    }
+
+    /* Styling for Form Container */
+    .form-container {
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+
+     /* Form Container Styles */
+     .form-container {
+        flex: 1;
+        padding: 30px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+    }
+
+    .form-container h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .form-container label {
+        font-size: 16px;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .form-container input,
+    .form-container select,
+    .form-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .form-container button {
+        padding: 12px 20px;
+        background-color: #007bff;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .form-container button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Additional Styling for Cards */
+    .card {
+        margin-bottom: 15px;
+        width: 30%; /* Adjust card width to ensure proper layout */
+    }
+}
+
+
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .join-section {
+        flex-direction: column; /* Stacks vertically on smaller screens */
+        gap: 30px;
+    }
 }

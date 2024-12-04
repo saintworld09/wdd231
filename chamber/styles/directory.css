@@ -39,11 +39,20 @@ header .logo {
     border-radius: 10px;
 }
 
+.logo {
+    width: 40px;
+}
+
 .nav-links {
+    display: flex; /* Display links side by side */
+    gap: 15px; /* Space between links */
+    justify-content: center; /* Center the links horizontally */
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    padding-left: 0;
+}
+
+.nav-links li {
+    margin-bottom: 0; /* Remove bottom margin */
 }
 
 .nav-links li a {
@@ -211,6 +220,208 @@ header .logo {
 #view-toggle button:hover {
     background-color: #0066cc;
 }
+
+/* Join Selection Section */
+.join-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 22px;
+    color: #333;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="submit"],
+button {
+    background-color: #0080ff;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #005cbf;
+}
+
+/* Membership Cards */
+.membership-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.membership-card,
+.card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.membership-card:hover,
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.membership-card h3,
+.card h2 {
+    font-size: 18px;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.membership-card a,
+.card button {
+    text-decoration: none;
+    color: #0080ff;
+    font-size: 14px;
+}
+
+.membership-card a:hover,
+.card button:hover {
+    color: #005cbf;
+    text-decoration: underline;
+}
+
+/* Modals for Membership Information (no changes) */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #004080;
+}
+
+.modal-body {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.modal-footer button {
+    background-color: #0080ff;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-footer button:hover {
+    background-color: #005cbf;
+}
+
+/* Mobile View Styles */
+@media screen and (max-width: 768px) {
+
+    
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .join-selection {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    .membership-cards {
+        display: block;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .membership-card,
+    .card {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    h1, h2 {
+        font-size: 18px;
+    }
+
+    label, input, select, button {
+        font-size: 14px;
+    }
+}
+
 
 /* Footer Section */
 footer {

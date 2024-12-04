@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for joining the Chamber of Commerce.">
+    <meta name="author" content="Adekola Babatunde">
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="styles/thank-you.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="styles/thank-you-large.css" media="screen and (min-width: 769px)">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+    <title>Thank You - Chamber of Commerce</title>
+</head>
+<body>
+    <header>
+        <h1>The Chamber of Commerce</h1>
+        <nav>
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="Chamber Logo" class="logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="thank-you-message">
+            <h2>Thank You for Submitting the Form</h2>
+            <p>We have received the following information:</p>
+            <ul id="user-details">
+                <!-- Dynamic content will be inserted here -->
+            </ul>
+            <p>Submission Date: <span id="timestamp"></span></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> 🌴 Adekola Babatunde 🌴 Nigeria 🏁</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+        <p>Current Date: <span id="current-date"></span></p>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="scripts/thank-you.js"></script>
+    </body>
+    </html>
