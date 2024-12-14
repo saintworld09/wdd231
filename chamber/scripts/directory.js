@@ -202,6 +202,8 @@ function capitalizeWords(str) {
     return str.replace(/\b\w/g, char => char.toUpperCase());
 }
 
+
+
 // Display Footer Information
 function displayFooterInfo() {
     const footerInfo = document.getElementById('footer-info');
@@ -233,6 +235,53 @@ document.addEventListener("DOMContentLoaded", () => {
       overlay.classList.remove("active");
     });
   });
+
+  // JavaScript for discover.html
+document.addEventListener("DOMContentLoaded", () => {
+    // Lazy loading images
+    const lazyImages = document.querySelectorAll(".lazy");
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src; // Load the actual image
+            img.classList.remove("lazy");
+            observer.unobserve(img); // Stop observing once loaded
+          }
+        });
+      },
+      { rootMargin: "50px" } // Load slightly before it's in view
+    );
+  
+    lazyImages.forEach((img) => observer.observe(img));
+  
+    // Visitor message using localStorage
+    const visitorMessage = document.getElementById("visitor-message");
+    const now = Date.now();
+    const lastVisit = localStorage.getItem("lastVisit");
+  
+    if (lastVisit) {
+      const timeDifference = now - lastVisit;
+      const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  
+      if (daysDifference < 1) {
+        visitorMessage.textContent = "Back so soon! Awesome!";
+      } else {
+        visitorMessage.textContent = `You last visited ${daysDifference} day(s) ago.`;
+      }
+    } else {
+      visitorMessage.textContent = "Welcome! Let us know if you have any questions.";
+    }
+  
+    localStorage.setItem("lastVisit", now);
+  
+    // Footer: Current year, last modified, and current date
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+    document.getElementById("last-modified").textContent = document.lastModified;
+    document.getElementById("current-date").textContent = new Date().toLocaleDateString();
+  });
+  
   
 
 // Initialize functions
